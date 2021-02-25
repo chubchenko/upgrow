@@ -64,7 +64,7 @@ module Upgrow
     #
     # @return [Result] self for chaining.
     def and_then
-      yield(*values) if errors.none?
+      yield(**to_h.except(:errors)) if errors.none?
       self
     end
 

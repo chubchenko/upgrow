@@ -48,7 +48,7 @@ class CommentsController < ApplicationController
    @input.article_id = params[:article_id]
 
    CreateCommentAction.new.perform(@input)
-     .and_then do |comment|
+     .and_then do |comment:|
        redirect_to(article_path(comment.article_id), notice: 'Comment was successfully created.')
      end
      .or_else do |errors|

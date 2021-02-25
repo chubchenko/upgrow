@@ -24,7 +24,7 @@ class ArticlesController < ApplicationController
     @input = ArticleInput.new(article_params)
 
     CreateArticleAction.new.perform(@input)
-      .and_then do |article|
+      .and_then do |article:|
         redirect_to(
           article_path(article.id), notice: 'Article was successfully created.'
         )
@@ -39,7 +39,7 @@ class ArticlesController < ApplicationController
     @input = ArticleInput.new(article_params)
 
     UpdateArticleAction.new.perform(params[:id], @input)
-      .and_then do |article|
+      .and_then do |article:|
         redirect_to(
           article_path(article.id),
           notice: 'Article was successfully updated.'

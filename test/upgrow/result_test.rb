@@ -45,7 +45,7 @@ module Upgrow
       success = Result.new(:user, :post)
         .success(user: 'volmer', post: 'hello!')
 
-      success.and_then do |user, post|
+      success.and_then do |user:, post:|
         assert_equal 'volmer', user
         assert_equal 'hello!', post
       end
