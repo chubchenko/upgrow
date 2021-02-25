@@ -38,7 +38,7 @@ module Upgrow
       returned_value = success.and_then { called = true }
 
       assert called
-      assert_equal success, returned_value
+      assert_same success, returned_value
     end
 
     test '#or_else passes the Result values as an argument to the given block' do
@@ -59,7 +59,7 @@ module Upgrow
       returned_value = failure.and_then { called = true }
 
       refute called
-      assert_equal failure, returned_value
+      assert_same failure, returned_value
     end
 
     test '#or_else does not call the given block and returns self for a successful Result' do
@@ -70,7 +70,7 @@ module Upgrow
       returned_value = success.or_else { called = true }
 
       refute called
-      assert_equal success, returned_value
+      assert_same success, returned_value
     end
 
     test '#or_else calls the given block and returns self for a failure Result' do
@@ -81,7 +81,7 @@ module Upgrow
       returned_value = failure.or_else { called = true }
 
       assert called
-      assert_equal failure, returned_value
+      assert_same failure, returned_value
     end
 
     test '#or_else passes the errors as an argument to the given block' do
