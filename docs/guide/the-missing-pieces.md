@@ -585,8 +585,8 @@ class ShowArticleAction < Action
    result.success ArticleRepository.new.find(id)
  end
 end
-
 ```
+
 Here’s an example of how an Action takes an Article Input and returns an Article Result. This Action checks if the input is valid, and proceeds with calling the Repository for persistence. If the input is invalid, however, it returns a failure Result populated with the validation errors.
 
 ```ruby
