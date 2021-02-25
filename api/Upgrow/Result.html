@@ -598,7 +598,7 @@
       <pre class="code"><span class="info file"># File 'lib/upgrow/result.rb', line 66</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_and_then'>and_then</span>
-  <span class='kw'>yield</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_values'>values</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_errors'>errors</span><span class='period'>.</span><span class='id identifier rubyid_none?'>none?</span>
+  <span class='kw'>yield</span><span class='lparen'>(</span><span class='op'>**</span><span class='id identifier rubyid_to_h'>to_h</span><span class='period'>.</span><span class='id identifier rubyid_except'>except</span><span class='lparen'>(</span><span class='symbol'>:errors</span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_errors'>errors</span><span class='period'>.</span><span class='id identifier rubyid_none?'>none?</span>
   <span class='kw'>self</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -694,7 +694,7 @@
 </div>
 
       <div id="footer">
-  Generated on Thu Feb 25 20:20:54 2021 by
+  Generated on Thu Feb 25 20:24:08 2021 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.26 (ruby-3.0.0).
 </div>
