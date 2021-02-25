@@ -46,7 +46,7 @@ module Upgrow
       #
       # @return [Result] the Result instance populated with the given errors.
       def failure(errors)
-        values = members.map { |member| [member, nil] }.to_h
+        values = members.to_h { |member| [member, nil] }
         new(**values.merge(errors: errors))
       end
     end
