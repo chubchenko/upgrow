@@ -44,7 +44,7 @@ module Upgrow
     end
 
     # Instance method to return the Action's Result class. This method delegates
-    # to the Action class's mehtod (see #result_class).
+    # to the Action class's method (see #result_class).
     #
     # @return [Result] the Result class for this Action.
     def result
