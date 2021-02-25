@@ -10,6 +10,7 @@ It is possible to design an architecture in Rails apps that allow changes to be 
 Let’s start by revisiting the existing object layers Rails provides by default and give them clear single responsibilities.
 
 ## Controllers
+
 Apart from the routes, controllers are the outermost layer of a Rails app. It is where HTTP requests first arrive in the Ruby code and where the final HTTP response is returned.
 
 Controllers should be responsible for dealing with the specifics of HTTP, making sure that everything the app needs to know from requests are properly extracted and that no intricacies of the protocol is leaked to the other layers of Ruby code. Therefore, anything HTTP-specific such as headers, query parameters, session storage, cookies, etags, and others, belong to the controller layer.
