@@ -11,6 +11,7 @@ module Upgrow
 
       assert_equal([:user, :post], struct.members)
       assert_equal(['volmer', 'hello'], struct.values)
+      assert struct.frozen?
     end
 
     test 'it does not respond to []=' do
