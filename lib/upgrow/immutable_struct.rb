@@ -30,6 +30,7 @@ module Upgrow
     def initialize(**args)
       members.each { |key| args.fetch(key) }
       super(**args)
+      freeze
     end
   end
 end
